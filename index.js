@@ -5,14 +5,14 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());  
 const cors = require('cors');
 const AuthRouter = require('./Routes/AuthRouter');
-const model = require('../backend/models/User')
-const ProductRouter = require('../backend/Routes/ProductRouter')
-const AddPostRouter = require('../backend/Routes/AddPostRouter')
-const AddPost = require('../backend/models/AddPost')
-const Post = require('../backend/models/AddPost')
+const model = require('./models/User')
+const ProductRouter = require('./Routes/ProductRouter')
+const AddPostRouter = require('./Routes/AddPostRouter')
+const AddPost = require('./models/AddPost')
+const Post = require('./models/AddPost')
 const dotenv = require("dotenv").config()
 const AddImgRoute = require('./Routes/AddImgRoute')
-const AddImg = require('../backend/models/AddImg');
+const AddImg = require('./models/AddImg');
 // const { AllPostRoute } = require('../backend/Routes/AllPostRoute');
 // const Post = require('../backend/models/AddPost')
 // require("./models/AddImg")

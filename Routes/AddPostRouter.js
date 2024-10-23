@@ -5,6 +5,13 @@ const bodyParser = require('body-parser');
 const addpostmodels = require('../models/AddPost')
 app.use(bodyParser.json({ limit: '100mb' }));  
 
+const cloudinary = require('cloudinary').v2;
+cloudinary.config({
+  cloud_name: 'dzipucmjc',
+  api_key: '313941745571122',
+  api_secret: 'cabATQHVJnhWf2Q8QQKUhd49aTM',
+});
+
 const Post = require('../models/AddPost');
 router.post('/',async (req,res)=>{
     try {

@@ -13,13 +13,12 @@ const Post = require('./models/AddPost')
 const dotenv = require("dotenv").config()
 const AddImgRoute = require('./Routes/AddImgRoute')
 const AddImg = require('./models/AddImg');
-// const { AllPostRoute } = require('../backend/Routes/AllPostRoute');
-// const Post = require('../backend/models/AddPost')
-// require("./models/AddImg")
 app.get('/', function (req, res) {
   res.send('Hello World my name is de')
   console.log("server started at port number  3000");
 });
+
+const PORT = process.env.PORT || 8080
 
 
 
@@ -29,22 +28,6 @@ app.use('/auth',AuthRouter);
 app.use('/products',ProductRouter);
 app.use('/addPost', AddPostRouter);
 app.use('/upload-img',AddImgRoute);
-// app.use(/)
-// app.use('/AllPost',AllPostRoute);
-
-
-// app.get('/Allpost', async (req, res) => {
-//   const email = req.query.email
-//   try {
-//    const data =  await AddPost.find({ email: email });
-//   //  const postCount = await AddPost.countDocuments({ email: email });
-//     console.log("Data fetched");
-//     res.status(200).json(data);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ error: 'Internal Server Error' });
-//   }
-// });
 
 
 
@@ -65,4 +48,5 @@ app.get('/Allpost', async (req, res) => {
 
 
 
-app.listen(process.env.PORT);
+// app.listen(process.env.PORT);
+app.listen(PORT);

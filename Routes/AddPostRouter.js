@@ -7,9 +7,9 @@ app.use(bodyParser.json({ limit: '100mb' }));
 
 const cloudinary = require('cloudinary').v2;
 cloudinary.config({
-  cloud_name: 'dzipucmjc',
-  api_key: '313941745571122',
-  api_secret: 'cabATQHVJnhWf2Q8QQKUhd49aTM',
+cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET,
 });
 
 const Post = require('../models/AddPost');

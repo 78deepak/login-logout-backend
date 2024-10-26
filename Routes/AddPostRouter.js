@@ -3,6 +3,7 @@ const router = express.Router();
 const app = express()
 const bodyParser = require('body-parser');
 const addpostmodels = require('../models/AddPost')
+const dotenv = require("dotenv").config()
 app.use(bodyParser.json({ limit: '100mb' }));  
 
 const cloudinary = require('cloudinary').v2;

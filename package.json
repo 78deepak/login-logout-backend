@@ -5,13 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-<<<<<<< HEAD
     "serve": "nodemon index.js",
     "start": "node index.js"
-=======
-    "start": "node index.js",
-    "serve": "nodemon index.js"
->>>>>>> b7e8ea73adba011b91d97ccc3c513616f56d3b42
   },
   "author": "Deepak patidar",
   "license": "ISC",

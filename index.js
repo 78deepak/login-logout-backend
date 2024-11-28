@@ -13,6 +13,12 @@ const Post = require('./models/AddPost')
 const dotenv = require("dotenv").config()
 const AddImgRoute = require('./Routes/AddImgRoute')
 const AddImg = require('./models/AddImg');
+<<<<<<< HEAD
+=======
+// const { AllPostRoute } = require('../backend/Routes/AllPostRoute');
+// const Post = require('../backend/models/AddPost')
+// require("./models/AddImg")
+>>>>>>> b7e8ea73adba011b91d97ccc3c513616f56d3b42
 app.get('/', function (req, res) {
   res.send('Hello World my name is deepak')
   console.log("server started at port number  3000");
@@ -48,5 +54,9 @@ app.get('/Allpost', async (req, res) => {
 
 
 
+<<<<<<< HEAD
 // app.listen(process.env.PORT);
 app.listen(PORT);
+=======
+app.listen(process.env.PORT);
+>>>>>>> b7e8ea73adba011b91d97ccc3c513616f56d3b42

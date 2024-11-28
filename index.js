@@ -14,7 +14,7 @@ const dotenv = require("dotenv").config()
 const AddImgRoute = require('./Routes/AddImgRoute')
 const AddImg = require('./models/AddImg');
 app.get('/', function (req, res) {
-  res.send('Hello World my name is de')
+  res.send('Hello World my name is deepak')
   console.log("server started at port number  3000");
 });
 

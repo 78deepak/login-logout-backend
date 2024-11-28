@@ -2,16 +2,15 @@ const express = require('express');
 const router = express.Router();
 const app = express()
 const bodyParser = require('body-parser');
-// const Post = require('../models/AddPost');
-// const addpostmodels = require('../models/AddPost')
+const dotenv = require("dotenv").config()
 app.use(bodyParser.json({ limit: '100mb' }));  
 const Post = require('../models/AddPost')
 
 const cloudinary = require('cloudinary').v2;
 cloudinary.config({
-  cloud_name: 'dzipucmjc',
-  api_key: '313941745571122',
-  api_secret: 'cabATQHVJnhWf2Q8QQKUhd49aTM',
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET,
 });
 
 
@@ -102,30 +101,6 @@ router.delete('/', async (req, res, next) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
-
-
-
-
-  // router.delete('/:id', async (req, res) => {
-  //   try {
-  //     const postId = req.params.id;// Add this line
-  
-  //     const response = await addpostmodels.findByIdAndDelete(postId);
-
-  //     if (!response) {
-  //       console.log(`Post with ID ${postId} not found for deletion.`);
-  //       return res.status(404).json({ error: 'Post not found' });
-  //     }
-  
-  //     console.log(`Post with ID ${postId} deleted successfully.`);
-  //     res.status(200).json({ message: 'Post Deleted Successfully' });
-  
-  //   } catch (error) {
-  //     console.error("Error occurred during deletion:", error);
-  //     res.status(500).json({ error: 'Internal Server Error' });
-  //   }
-  // });
-
 
   
 
